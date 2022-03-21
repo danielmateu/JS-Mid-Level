@@ -24,11 +24,23 @@ Ejecuta una sentencia si una condición especificada es true. Si la condición e
     switch:
 Evalua una expresión, igualando el valor de la expresión a una clausula case y ejecuta las sentencias asociadas con dicho case.
 
-    throw:
-Lanza una excepción definida por el usuario.
-
-    try...catch:
-Marca un bloque de sentencias para ser probadas (try) y especifica una respuesta, en caso de que se lance una excepción.
-
 
 Sentencias de manejo de excepciones:
+
+La usamos para manejar los errores y lazarselo al usuario para que no ucurra el error.
+
+Para controlar ese error, usamos estas sentencias
+
+    try...catch:
+Marca un bloque de sentencias para ser probadas (try) y especifica una respuesta, en caso de que se lance una excepción. Controlamos los errores que estan basados en comportamientos que el programador espera. No errores de sintaxis.
+
+Hay dos tipos de catch:
+
+    Condicional: Son los que tienen algún tipo de condición dentro.
+
+    Incondicional: No tiene nada dentro. No tiene ninguna condicion
+    
+
+        throw: Lanza una excepción definida por el usuario.
+
+        finnally : Pase lo que pase, el finnally se ejecuta. 
