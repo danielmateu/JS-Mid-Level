@@ -1,0 +1,79 @@
+body{
+    background-color:beige;
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+#app{
+    margin-top: 50px;
+}
+
+.form{
+    background-color:white;
+    padding: 20px;
+    width: 300px;
+    margin: 0 auto;
+}
+
+button{
+    border: none;
+    background-color:red;
+    padding:5px;
+    color: white !important;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -ms-border-radius:3px;
+    -o-border-radius:3px;
+}
+
+.form input{
+    margin: 5px 0;
+    padding: 5px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+input[type="submit"]{
+    border: none;
+    background-color: #1860a8;
+    color: white;
+    padding: 10px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+#events-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    padding: 10px;
+    width: 25em;
+    margin: 50px auto;
+}
+
+.event{
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.days{
+    font-weight: bold;
+}
+
+
+

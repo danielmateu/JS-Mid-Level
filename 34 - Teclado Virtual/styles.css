@@ -1,0 +1,83 @@
+body{
+    background-color:rgb(92, 146, 150);
+    font-family: 'Poppins',sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    
+
+}
+
+#app{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    margin: 50px 0 0 0;
+    width: 50%;
+    height: 140px;
+    outline: none;
+    font-size: 45px;
+}
+
+#keyboard-container{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+    gap: 4px;
+    margin: 100px auto;
+}
+
+.layer{
+    display: flex;;
+    gap: 5px;
+    justify-content: center;
+    width: 100%;
+}
+
+.key{
+    cursor: pointer;
+    background: #222222;
+    color: #fff;
+    border: none;
+    border-radius:3px;
+    -webkit-border-radius:3px;
+    -moz-border-radius:3px;
+    -ms-border-radius:3px;
+    -o-border-radius:3px;
+}
+
+.key-normal{
+    width: 30px;
+    height: 30px;
+}
+
+.key-space{
+    width: 50%;
+    height: 30px;
+}
+
+.key:hover{
+    background: #424242
+}
+
+.activated{
+    color:rgb(121, 42, 42);
+    font-weight: 600;
+    border: 2px solid rgb(72, 134, 83);
+}
+
+.activated:hover{
+    background: #000000;
+}
+
+
+
+
+
+
+
+
+

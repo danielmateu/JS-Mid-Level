@@ -1,0 +1,82 @@
+body {
+    background-color: rgb(92, 146, 150);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+#comments-container{
+   width: 50vw;
+   margin: 0 auto;
+   display: flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+   gap: 5px;
+}
+
+.comment-container{
+    border: 1px solid #91a8c2 ;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+    background-color: rgb(54, 54, 54);
+}
+
+.responses-container{
+    margin-top: 10px;
+    padding-left: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 5px;
+
+}
+
+.responses-container .comment-container{
+    background: #4e5a66;
+    color: #fff;
+}
+
+.input-container{
+    margin-top: 10px;
+    padding: 5px 15px;
+    border: 1px solid #ccc;
+    border-radius:15px;
+    -webkit-border-radius:15px;
+    -moz-border-radius:15px;
+    -ms-border-radius:15px;
+    -o-border-radius:15px;
+    outline: none;
+}
+
+button{
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border: none;
+    background: #fff;
+    cursor: pointer;
+    padding: 5px 15px;
+    margin: 4px;
+    transition: .1s ease;
+    -webkit-transition: .1s ease;
+    -moz-transition: .1s ease;
+    -ms-transition: .1s ease;
+    -o-transition: .1s ease;
+}
+
+button:hover{
+    background: #91a8c2;
+    color: #fff;
+}
+
+.like-button{
+    background:rgb(100, 162, 187);
+}

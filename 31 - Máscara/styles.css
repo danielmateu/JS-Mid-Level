@@ -1,0 +1,58 @@
+body{
+    background-color:rgb(95, 95, 95);
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.card{
+    width: 500px;
+    height:300px;
+    background: rgb(182, 168, 39);
+    background: radial-gradient(
+        circle,
+        #b6a827 1%,
+        #19ad81 100%
+    );
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin: 100px auto;
+    box-sizing: border-box;
+}
+
+.card input {
+    font-size:28px;
+    padding: 10px;
+    border: 1px solid #148563;
+    color: #e2e2e2;
+    border-radius:5px;
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    -ms-border-radius:5px;
+    -o-border-radius:5px;
+    background-color: transparent;
+    margin: 5px 5px;
+    outline: none
+}
+
+.holder{
+    background-color: transparent;
+    font-weight: bold;
+    font-size:28px;
+    margin: 0 5px;
+    padding-top: 50px;
+}
+
+.card #input-date{
+    width: 80px;
+}
+
+.card #input-cvv{
+    width: 50px;
+}
+
+

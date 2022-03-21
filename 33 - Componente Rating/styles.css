@@ -1,0 +1,33 @@
+body{
+    background-color:rgb(98, 175, 180);
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.rating{
+    margin: 50px auto;
+    display: flex;
+    width: fit-content;
+    background:rgba(255, 255, 255, 0);
+    
+}
+
+.item{
+    background:rgb(146, 146, 146);
+    width: 50px;
+    height: 44px;
+    -webkit-mask-image: url(star-solid.svg) ;
+    mask-image: url(star-solid.svg);
+    cursor: pointer;
+}
+
+.item-full{
+    background:rgb(196, 199, 51);
+}
+
+.fa-star{
+    font-size: 24px;
+}
+
