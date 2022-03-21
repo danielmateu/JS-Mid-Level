@@ -1,94 +1,32 @@
 body{
-    background-color:rgb(95, 95, 95);
+    background-color:#5c9296;
+    ;
     font-family: 'Poppins',sans-serif;
     margin: 0;
     padding: 0;
-    text-align: center;
+    
     
 }
 
-h2{
-    color: #fff;
-}
-
-.contenedor{
-    margin: auto;
-    width: 350px;
-    height: fit-content;
-    background: rgba(255, 255, 255, 0.507);
+.flex-container{
     display: flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    align-items: center;
-    
+    height: 50vh
 }
 
-form{
-    display:flex;
-    align-items: center;
-    flex-direction: column;
+.grid-container{
+    display: grid;
+    grid-template-rows: 50px;
+    grid-template-columns: repeat(4,minmax(min-content,max-content));
+    grid-auto-rows: 50px;
+    gap:10px
+   
+
+}
+
+.grid-container .grid-item{
     padding: 10px;
-    
+    border: 4px solid #3b686b;
+   
 }
-
-input{
-    margin: 10px;
-    padding: 10px;
-    width:100%;
-    outline: none;
-    border: none;
-    color:#fff;
-    font-weight: 600;
-    background: rgba(166, 191, 202, 0.479);
-    transition: .2s ease;
-    -webkit-transition: .2s ease;
-    -moz-transition: .2s ease;
-    -ms-transition: .2s ease;
-    -o-transition: .2s ease;
-}
-
-input:focus{
-    background: rgba(126, 126, 126, 0.726);
-}
-
-input::placeholder{
-    font-weight: 600;
-    color:rgb(238, 238, 238)
-}
-
-input[type="submit"]{
-    background: rgb(80, 165, 108);
-    color: #fff;
-    border-radius: 3px;
-    width:50%;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    transition: .2s;
-    -webkit-transition: .2s;
-    -moz-transition: .2s;
-    -ms-transition: .2s;
-    -o-transition: .2s;
-}
-
-input[type="submit"]:hover{
-    background: rgb(90, 182, 121);
-    color: rgb(75, 75, 75);
-    
-}
-
-.resultado{
-    padding:15px;
-}
-
-.green{
-    color: rgb(72, 128, 89);
-    font-weight: 700;
-}
-
-.red{
-    color: rgb(155, 70, 70);
-    font-weight: 700;
-}
-
