@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Control de Flujo</title>
+    <title>Cofla - introduce la nota!</title>
     <link rel="stylesheet" href="./styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,10 +18,18 @@
 </head>
 
 <body>
+    <div class="modal-bg">
+        <div class="modal">
+            <h3 class="resultado"></h3>
+            <p class="mensaje"></p>
+        </div>
+    </div>
+
     <div class="formulario-de-notas">
         <form action="">
             <h2>Introduce la nota del alumno</h2>
             <input type="number" id="nota-alumno" />
+            <input type="button" id="enviar-nota" value="enviar" />
         </form>
     </div>
 
