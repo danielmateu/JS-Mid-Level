@@ -1,2 +1,2 @@
-Funciones asincronas -> Las promesas son asíncrona, por lo que trabajan a tiempo real.
+Debemos crear un sistema que almacene toda la información de las materias y las muestre de forma ordenada.
 
