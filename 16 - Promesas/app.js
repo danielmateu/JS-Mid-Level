@@ -12,6 +12,8 @@ const data = [
     ['Silvia', '@SIlvia88'],
     ['Nuk', '@Nuk12'],
     ['Camilo Neso', '@milo'],
+    ['Armando Fiestas', '@fiesto'],
+    ['John Snow', '@coco'],
 ];
 
 const personas = [];
