@@ -5,5 +5,88 @@ body{
     margin: 0;
     padding: 0;
     text-align: center;
+    
 }
 
+form{
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border: 10px solid #467174;
+    border-radius: 3px;
+    margin: 50px;
+}
+
+h2{
+    margin-right: 15px;
+}
+
+
+input{
+    height:min-content;
+    width: auto;
+    margin:5px;
+}
+
+#nota-alumno{
+    width: 35px;
+    border: none;
+    outline: none;
+}
+
+#enviar-nota{
+    background: #3fad71;
+    border: none;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+    -webkit-transition: all 0.2s ease;
+    -moz-transition: all 0.2s ease;
+    -ms-transition: all 0.2s ease;
+    -o-transition: all 0.2s ease;
+}
+
+#enviar-nota:hover{
+    background: #348a5b;
+    color: #fff;
+}
+
+.modal-bg{
+    box-sizing: border-box;
+    width: 100vw;
+    height: 100vh;    
+    background: rgba(61, 61, 61, 0.568);
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+   
+}
+
+.modal{
+    background: #fff;
+    width: 80%;
+    height: min-content;
+    border-radius: 3px;
+}
+
+.green{
+    color: rgb(50, 163, 88);
+}
+
+.red{
+    color: rgb(139, 51, 51);
+}
+
+@keyframes aparecer {
+    0%{
+        opacity: 0;
+        display: flex;
+    }100%{
+        opacity: 1;
+        display: flex;
+    }
+    
+}

@@ -21,7 +21,11 @@ enviarNota.addEventListener('click', () =>{
 })
 
 const abrirModal = (res,msg) =>{
-    console.log(res,msg);
+    document.querySelector('.resultado').innerHTML = res;
+    document.querySelector('.mensaje').innerHTML = msg; 
+    let modal = document.querySelector('.modal-bg');
+    modal.style.display = 'flex';
+    modal.style.animation = 'aparecer 1s forwards';
 }
 
 const definirMensaje = (pr) =>{
@@ -31,42 +35,42 @@ const definirMensaje = (pr) =>{
     } else {
         switch (pr) {
             case 1:
-                resultado = 'Fatal...';
+                resultado = 'El examen: Fatal...';
                 break;
             case 2:
-                resultado = 'Muy mal...';
+                resultado = 'El examen: Muy mal...';
                 break;
                 
             case 3:
-                resultado = 'Meh......';
+                resultado = 'El examen: Meh......';
                 break;
                 
             case 4:
-                resultado = 'Casi... Pero No!';
+                resultado = 'El examen: Casi... Pero No!';
                 break;
 
             case 5:
-                resultado = 'Suficiente!';
+                resultado = 'El examen: Suficiente!';
                 break;
 
             case 6:
-                resultado = 'Bien!';
+                resultado = 'El examen: Bien!';
                 break;
 
             case 7:
-                resultado = 'Notable!';
+                resultado = 'El examen: Notable!';
                 break;
 
             case 8:
-                resultado = 'Perfecto!';
+                resultado = 'El examen: Perfecto!';
                 break;
 
             case 9:
-                resultado = 'Excelente!';
+                resultado = 'El examen: Excelente!';
                 break;
 
             case 10:
-                resultado = 'Matricula de honor!';
+                resultado = 'El examen: Matricula de honor!';
                 break;
 
 
@@ -79,9 +83,9 @@ const definirMensaje = (pr) =>{
 }
 
 const verificarAprobado = (nota1,nota2,prevRes) =>{
-    const media = (nota1 + nota2 + prevRes)/3;
+    const media =((nota1 + nota2 + prevRes)/3).toFixed(2);
     if(media >=7){
-        return `<b style='color:green'>'APROBADO!'</b>`;
+        return [`<span class='green'>APROBADO!</span> tienes una media de: ${media}`];
     }
-    return `<b style="color:red">'SUSPENDIDO...'</b>`
+    return [`<span class='red'>SUSPENDIDO...</span> tienes una media de: ${media}`];
 }
