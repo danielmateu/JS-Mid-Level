@@ -1,91 +1,55 @@
 'use strict'
 
-const notaAlumno = document.getElementById('nota-alumno');
-const enviarNota = document.getElementById('enviar-nota');
+class Persona {
+    constructor(nombre, instagram) {
+        this.nombre = nombre;
+        this.instagram = instagram;
+    }
+}
 
-enviarNota.addEventListener('click', () =>{
-    let resultado, mensaje;
-    try{
-        let prevRes = parseInt(notaAlumno.value);
-        if(isNaN(prevRes)){
-            throw 'Debes introducir un número'
-        }
-        mensaje = definirMensaje(prevRes);
-        resultado = verificarAprobado(8,5,prevRes);
-    }catch(e){
-        resultado = 'Debes introducir un número del 1 al 10';
-        mensaje = 'O me quieres hackear?'
+const data = [
+    ['Dani', ''],
+    ['Silvia', '@SIlvia88'],
+    ['Nuk', '@Nuk12'],
+    ['Camilo Neso', '@milo'],
+];
+
+const personas = [];
+
+for (let i in data) {
+    personas[i] = new Persona(data[i][0], data[i][1]);
+}
+
+const obtenerPersona = (id, cb) => {
+    if (personas[id] == undefined) {
+        cb('No se ha encontrado la persona')
+    } else {
+        cb(null, personas[id], id);
     }
 
-    abrirModal(resultado,mensaje);
+}
+
+const obtenerInstagram = (id, cb) => {
+    if (personas[id].instagram == undefined) {
+        cb('No se ha encontrado el instagram')
+    } else {
+        cb(null, personas[id].instagram);
+    }
+}
+
+obtenerPersona(1, (err, persona, id) => {
+    if (err) {
+        console.log(err);
+    } else {
+        console.log(persona.nombre);
+        obtenerInstagram(id, (err, instagram) => {
+            if (err) {
+                console.log(err);
+            } else {
+                console.log(instagram);
+            }
+        })
+    }
 })
 
-const abrirModal = (res,msg) =>{
-    document.querySelector('.resultado').innerHTML = res;
-    document.querySelector('.mensaje').innerHTML = msg; 
-    let modal = document.querySelector('.modal-bg');
-    modal.style.display = 'flex';
-    modal.style.animation = 'aparecer 1s forwards';
-}
 
-const definirMensaje = (pr) =>{
-    let resultado = parseInt(notaAlumno.value)
-    if (isNaN(resultado)) {
-        return 'Qué haces? Introduce un número'
-    } else {
-        switch (pr) {
-            case 1:
-                resultado = 'El examen: Fatal...';
-                break;
-            case 2:
-                resultado = 'El examen: Muy mal...';
-                break;
-                
-            case 3:
-                resultado = 'El examen: Meh......';
-                break;
-                
-            case 4:
-                resultado = 'El examen: Casi... Pero No!';
-                break;
-
-            case 5:
-                resultado = 'El examen: Suficiente!';
-                break;
-
-            case 6:
-                resultado = 'El examen: Bien!';
-                break;
-
-            case 7:
-                resultado = 'El examen: Notable!';
-                break;
-
-            case 8:
-                resultado = 'El examen: Perfecto!';
-                break;
-
-            case 9:
-                resultado = 'El examen: Excelente!';
-                break;
-
-            case 10:
-                resultado = 'El examen: Matricula de honor!';
-                break;
-
-
-            default:
-                resultado = null;
-                break;
-        }
-        return resultado;
-    }
-}
-
-const verificarAprobado = (nota1,nota2,prevRes) =>{
-    const media =((nota1 + nota2 + prevRes)/3).toFixed(2);
-    if(media >=7){
-        return [`<span class='green'>APROBADO!</span> tienes una media de: ${media}`];
-    }
-    return [`<span class='red'>SUSPENDIDO...</span> tienes una media de: ${media}`];
-}
