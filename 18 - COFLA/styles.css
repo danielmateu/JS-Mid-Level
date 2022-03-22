@@ -8,3 +8,36 @@ body{
     
 }
 
+.materias{
+    margin:auto;
+    width: 40vw;
+    
+    
+}
+
+.materia{
+    border: 10px solid #666;
+    background: #5c7796;
+    padding: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.materia div{
+    padding: 10px;
+}
+
+.materia .nota{
+    background: rgba(143, 48, 48, 0.63);
+    height: 20px;
+    border-radius:50%;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+}
+
+
+
