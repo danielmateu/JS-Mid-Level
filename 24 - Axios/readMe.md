@@ -1,29 +1,22 @@
-La API Fetch proporciona una interfaz JS para acceder y manipular partes del canal HTTP, tales como peticiones y respuestas. Tambien provee un método global que proporciona una forma fácil y lógica de obtener recursos de forma asíncrona por la red. 
+AXIOS -> Es una bilblioteca de JS muy conveniente para realizar solicitudes HTTP en node.js
 
-Este tipo de funcionalidad se conseguía previamente haciendo uso de XMLHttpRequest, Fetch proporciona una alternativa mejor que puede ser empleada fácilmente por otras tecnologías como SErvice Workers. 
+Es compatible con todos los navegadores modernos, está basado en promesas y esto nos permite escribir código asíncronico, en espera para realizar XHR.
 
-Fetch tambien aporta un único ligar lógico en el que definir otros conceptos relacionados con HTTP como CORS y extensiones para HTTP.
+El uso de axios tiene bastante ventajas en referencia a fetch:
 
-La especificación fetch difiere de ajax en dos formas principales: `
+    -Admite navegadores más antiguos(Fetch necesita el polyfill);
+    -Tiene una forma de cancelar una solicitud
+    -Tiene una forma de establecer un tiempo de espera de respuesta;
+    -Tiene proteccion CSRF incorporada
+    -Admite el progreso de carga 
+    -Realiza automaticamente la transformación de datos JSON 
+    -Funciona en nodeJs.
 
-    -El objeto Promise devuelto desde fetch no será rechazado con un estado de error HTTP incluso si la respuesta es un error HTTP 404 o 500. Este se resolverá normalmente y solo será rechazado ante un fallo de red o si algo impide completar la solicitud.
+    Se puede instalar por npm : npm install axios
 
-    -Por defecto, fetch no enviará ni recibirá cookies del servidor, resultando en peticiones no autenticadas si el sitio permite mantener una sesión de usuario.
+    O incluyendolo usando el CDN: 
 
-    Una petición básica de fetch es realmente simple de realizar:
-
-    fetch('url').then(response => response.json()).then(data => console.log(data));
-
-Aquí estamos recuperando un archivo JSON a traves de un url e imprimiendolo en consola. Tomamos un argumento (url) y nos devuelve un objeto Promise conteniendo la respuesta, un objeto Response.
-
-Esto es una respuesta HTTP, no el archivo JSON. Para extraer el contenido en el cuerpo del JSON desde la respuesta, usamos el método json()
-
-Otros métodos útiles: 
-
-    -text()
-    -blob() ->
-    -formData()
-    -arrayBuffer();
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
 
 
