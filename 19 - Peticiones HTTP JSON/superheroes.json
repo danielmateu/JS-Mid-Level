@@ -36,6 +36,18 @@
         "Teleportation",
         "Interdimensional travel"
       ]
+    },
+    {
+      "name" : "Nuk Peluk",
+      "age" : 9,
+      "secretIdentity" : "Dotz Peluk",
+      "powers" : [
+        "Immortality",
+        "Fluffy",
+        "Sweat as candy",
+        "Quiet as Hell",
+        "Lovely"
+      ]
     }
   ]
 }

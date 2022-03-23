@@ -28,4 +28,12 @@ Para saber cómo manejar las peticiones, primero debemos saber manejar los datos
     JSON es solo un formato de datos, contiene propiedades, no métodos.
 
     Los JSON requieren usar comillas dobles para los Strings y nombres de las propiedades, las comillas simples no son válidas. Est
+
+
+En algunas ocasiones, se recibirá una cadena JSON sin procesar, y será necesario convertirla en un objeto. Cuando sea necesario enviar un objeto, será necesario econvertirlo a un JSON (cadena) antes de ser enviado.Para ello tenemos los dos siguientes métodos:
+
+    parse(): Acepta una cadena JSON como parámetro y devuelve el objeto correspondiente.
+
+    stringify(): Acepta un objeto como parámetro y devuelve la cadena JSON equivalente.
+
     

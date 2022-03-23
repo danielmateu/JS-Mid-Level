@@ -4,7 +4,7 @@ const header = document.querySelector('.header');
 const section = document.querySelector('.section');
 
 //Para empezar, se debe almacenar la URL del JSON que se quiere recuperar en una variable
-const requestURL = 'https://mdn.github.io/learning-area/javascript/oojs/json/superheroes.json';
+const requestURL = './superheroes.json';
 
 //Para crear una solicitud, se necesita crear una nueva instancia de objeto de solicitud desde el constructorXMLHttpRequest
 const request = new XMLHttpRequest();
@@ -18,12 +18,14 @@ const request = new XMLHttpRequest();
 request.open('GET', requestURL);
 
 //establecemos el responseType a JSON, de esta forma ese XHR sabe que el servidor estará retornando JSON y que esto debería ser convertido en segundo plano en un objeto JavaScript. Entonces se envía la solicitud con el método send():
-request.responseType = 'json';
+request.responseType = 'text';
 request.send();
 
 //La última parte de esta sección comprende la espera por la respuesta a retornar desde el servidor y luego, manejarla.
 request.onload = function(){
-    const superheroes = request.response;
+    const superheroesText = request.response;
+
+    const superheroes = JSON.parse(superheroesText);
 
     //console.log(superheroes);
     populateHeader(superheroes);
