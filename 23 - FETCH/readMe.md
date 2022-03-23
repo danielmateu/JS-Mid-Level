@@ -14,3 +14,16 @@ La especificación fetch difiere de ajax en dos formas principales: `
 
     fetch('url').then(response => response.json()).then(data => console.log(data));
 
+Aquí estamos recuperando un archivo JSON a traves de un url e imprimiendolo en consola. Tomamos un argumento (url) y nos devuelve un objeto Promise conteniendo la respuesta, un objeto Response.
+
+Esto es una respuesta HTTP, no el archivo JSON. Para extraer el contenido en el cuerpo del JSON desde la respuesta, usamos el método json()
+
+Otros métodos útiles: 
+
+    -text()
+    -blob() ->
+    -formData()
+    -arrayBuffer();
+
+
+

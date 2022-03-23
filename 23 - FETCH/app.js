@@ -1,22 +1,19 @@
 'use strict'
 
-let request;
+// fetch('./informacion.txt')
+// .then(response =>response.json())
+// .then(data => console.log(data));
 
-if(window.XMLHttpRequest) request = new XMLHttpRequest();
-else request = new ActiveXObject("Microsoft.XMLHTTP");
+//Para hacer una peticion POST
 
-request.addEventListener('load', ()=>{
-    let respuesta;
-    if(request.status === 200 || request.status === 201) respuesta = request.response;
-    else respuesta = 'No se ha encontrado el recurso';
-    console.log(JSON.parse(respuesta));
-})
+let headers = {
+    method: 'post',
+    body: '{"nombre" : "Daniel","apellidos" : "Mateu Pardo"}',
+    headers: {"Content-Type": "application/json"}
+}
 
-request.open('post', 'https://reqres.in/api/users?page=2');
+fetch('https://reqres.in/api/users', headers)
+.then(response => response.json())
+.then(data => console.log(data));
 
-request.setRequestHeader('Content-Type', 'application/json; charset=utf8');
-
-request.send(JSON.stringify({
-    'nombre':'Dani',
-    'trabajo':'Web Developer'
-}));
+//Dependiendo del tipo de info que enviemos vamos a tener headers y valor de cabecera distintos 
