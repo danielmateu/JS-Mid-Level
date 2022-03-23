@@ -1,31 +1,19 @@
 'use strict'
 
+let request;
 
-
-const request = new XMLHttpRequest();
-// request.addEventListener('readystatechange', ()=>{
-//     console.log(request.readyState);
-//     Estados del ready state 
-//     1. Se creó correctamente
-//     2. La solicitud se envió correctamente
-//     3. Se está procesando 
-//     4. La respuesta ha sido recibida y es posible continuar procesandola.
-
-//     Antes se hacia así. Ahora usamos 'load'
-    
-//     if(request.readyState === 4 && request.status === 200){
-//         console.log(request.response);
-//         status 404 -> No se encontró
-//         status 200 -> Si todo sale bien
-//     }
-// })
+if(window.XMLHttpRequest){
+    request = new XMLHttpRequest();
+}else{
+    request = new ActiveXObject('Microsoft.XMLHTTP');
+}
 
 request.addEventListener('load',()=>{
     //La validación la podemos hacer nosotros
     let respuesta = ''
     if(request.status === 200)  respuesta = request.response;
-    else respuesta = 'No se ha encontrado el recurso...'
-    console.log(respuesta);
+    else respuesta = 'No se ha encontrado el recurso...';
+    console.log(JSON.parse(respuesta).members);
 })
 
 request.open('GET','./informacion.txt');
