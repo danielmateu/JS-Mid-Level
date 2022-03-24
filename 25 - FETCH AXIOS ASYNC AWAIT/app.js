@@ -1,19 +1,19 @@
 'use strict'
 
-const getName = async () =>{
+const getName = async () => {
     let resultado = await axios('informacion.txt');
 
     //console.log(resultado.data.squadName);
     let div = document.createElement('div');
     let squadName = resultado.data.squadName;
     div.classList.add('nombre');
-    div.innerHTML =`Nombre - ${squadName}` ;
+    div.innerHTML = `Nombre - ${squadName}`;
 
     document.body.appendChild(div)
-    //document.querySelector('.nombre').innerHTML = squadName;
+
 };
 
-const getCity = async () =>{
+const getCity = async () => {
     let peticion = await fetch('informacion.txt');
     let resultado = await peticion.json();
 
@@ -23,7 +23,7 @@ const getCity = async () =>{
     div.innerHTML = homeTown;
 
     document.body.appendChild(div)
-    //document.querySelector('.getLocation');
+
 }
 
 const getCreation = async () => {
@@ -36,7 +36,7 @@ const getCreation = async () => {
     div.innerHTML = formed;
 
     document.body.appendChild(div);
-    //document.querySelector('.getCreation');
+
 }
 
 const getSecretBase = async () => {
@@ -49,15 +49,11 @@ const getSecretBase = async () => {
     div.innerHTML = secretBase;
 
     document.body.appendChild(div)
-   
+
 }
 
 
-document.getElementById('getName').addEventListener('click',getName);
-document.getElementById('getLocation').addEventListener('click',getCity);
-document.getElementById('getCreation').addEventListener('click',getCreation);
-document.getElementById('getSecretBase').addEventListener('click',getSecretBase);
-
-
-
-
+document.getElementById('getName').addEventListener('click', getName);
+document.getElementById('getLocation').addEventListener('click', getCity);
+document.getElementById('getCreation').addEventListener('click', getCreation);
+document.getElementById('getSecretBase').addEventListener('click', getSecretBase);
