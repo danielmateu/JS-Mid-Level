@@ -1,16 +1,16 @@
 'use strict'
 
 const getName = async () =>{
-    let peticion = await fetch('informacion.txt');
-    let resultado = await peticion.json();
+    let resultado = await axios('informacion.txt');
 
+    //console.log(resultado.data.squadName);
     let div = document.createElement('div');
-    let squadName = resultado.squadName;
+    let squadName = resultado.data.squadName;
     div.classList.add('nombre');
-    div.innerHTML = squadName;
+    div.innerHTML =`Nombre - ${squadName}` ;
 
     document.body.appendChild(div)
-    document.querySelector('.nombre').innerHTML = squadName;
+    //document.querySelector('.nombre').innerHTML = squadName;
 };
 
 const getCity = async () =>{
@@ -23,7 +23,7 @@ const getCity = async () =>{
     div.innerHTML = homeTown;
 
     document.body.appendChild(div)
-    document.querySelector('.getLocation');
+    //document.querySelector('.getLocation');
 }
 
 const getCreation = async () => {
@@ -36,7 +36,7 @@ const getCreation = async () => {
     div.innerHTML = formed;
 
     document.body.appendChild(div);
-    document.querySelector('.getCreation');
+    //document.querySelector('.getCreation');
 }
 
 const getSecretBase = async () => {
@@ -49,7 +49,7 @@ const getSecretBase = async () => {
     div.innerHTML = secretBase;
 
     document.body.appendChild(div)
-    document.querySelector('.getCreation');
+   
 }
 
 
